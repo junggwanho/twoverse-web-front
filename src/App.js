@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Login from './auth/Login';
+import Signin from './auth/Signin';
+import FindId from './auth/FindId';
+import FindPw from './auth/FindPw';
+import Email from './auth/Email';
 
 function App() {
+  const [mode, setMode] = useState("LOGIN");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="background">
+        {/* mode 상태에 따라 Login, Signin, 또는 FindId 컴포넌트를 렌더링합니다. */}
+        {mode === "LOGIN" ? <Login setMode={setMode} /> : mode === "EMAIL" ? <Email setMode={setMode} /> : mode === "SIGNIN" ? <Signin setMode={setMode} /> : <FindPw setMode={setMode} />}
+      </div>
+    </>
   );
 }
 
