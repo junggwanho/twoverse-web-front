@@ -28,6 +28,17 @@ function Signin(props) {
     setPassword(inputValue); // 비밀번호 상태 업데이트
   }
 
+  const handleEmailInputChange = (event) => {
+    const value = event.target.value;
+    // 유효성 검사 룰을 정의합니다.
+    if (/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i.test(value)) {
+      setEmailErrorMessage("");
+    } else {
+      setEmailErrorMessage('이메일 형식으로 작성해 주세요');
+    }
+    setEmail(value); // 이메일 상태 업데이트
+  }
+
   // const handleSubmit = async () => {
   //   if (id.length === 0) {
   //     alert('아이디를 입력해주세요.');
@@ -123,10 +134,13 @@ function Signin(props) {
                     className="form-control form-control-email"
                     placeholder="email을 입력해주세요"
                     required
-                    value={password}
-                    onChange={handlePasswordInputChange}
-                  />
-                  <button>
+                    value={email}
+                    onChange={handleEmailInputChange}
+                  />{emailErrorMessage && (
+                    <p style={{ color: 'red', 
+                                fontSize: '13px'}}>{emailErrorMessage}</p>
+                  )}
+                  <button type='button'>
                     인증번호 발송
                   </button>
                 </div>
