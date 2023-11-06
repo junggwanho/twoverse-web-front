@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+/* div {
+    border: 3px;
+    border-style: solid;
+    border-color: red;
+} */
+
+/* .container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-width: 1280px;
+    height: 200%;
+    margin: auto;
+
+} */
+
+.navbar {
+    display: flex;
+    padding: 6px;
+    justify-content: space-between;
+    height: 60px;
+    max-width: 100%;
+}
+
+.img-logo{
+    display: flex;
+}
+
+.secret-bar-button{
+    margin-top: 2px;
+    width: 28px;
+    height: 28px;
+}
+.body-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 3fr 2fr;
+    grid-gap: 20px;
+    margin-left: 20px;
+    height: 650px;
+}
+
+.sidebar {
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+.Job-evaluation-dashboard {
+    grid-column: 1/3;
+    height: 100%;
+}
+
+.progress-dashbord {
+    grid-column: 1;
+    height: 100%;
+}
+
+.feedback {
+    grid-column: 2;
+    height: 100%;
+    
+}
