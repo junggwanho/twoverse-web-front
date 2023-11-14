@@ -1,24 +1,31 @@
 import './App.css';
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './auth/Login';
 import Signin from './auth/Signin';
 import FindId from './auth/FindId';
 import FindPw from './auth/FindPw';
 import Email from './auth/Email';
-import Main from './document/Main';
-import Chart from './document/Chart';
+import Main from './document/Main'
+import palette from './lib/styles/palette';
+import button from './document/img/button.png'
+import styled from 'styled-components';
 
 function App() {
   const [mode, setMode] = useState("MAIN");
 
+
+  const MainBox = styled.div`
+    width: 100%;
+    height: 100%;
+    background: ${palette.cyan[0]};
+  `
+
   return (
-    <>
-      <div className="background">
-        {/* mode 상태에 따라 Login, Signin, 또는 FindId 컴포넌트를 렌더링합니다. */}
-        {mode === "MAIN" ? <Main setMode={setMode} /> : mode === "EMAIL" ? <Email setMode={setMode} /> : mode === "SIGNIN" ? <Signin setMode={setMode} /> : <FindPw setMode={setMode} />}
-      </div>
-    </>
-  );
+    <MainBox>
+      <Main />
+    </MainBox>
+  )
 }
 
 export default App;

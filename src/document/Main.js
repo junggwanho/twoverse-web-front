@@ -1,35 +1,30 @@
 import React from 'react';
-import './Main.css';
-import button from "./img/button.png"
-import Chart from './Chart'
+import Dashbord from './Dashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SideOpenbar from './sideOpenbar/SideOpenbar';
+import styled from "styled-components";
 
-function Main(props) {
+const Container = styled.div`
+    width:100vh;
+    height:100vh;
+`;
+
+export default function Main() {
     return (
-        <div>
-            <div className="navbar">
-                <div className="img-logo">
-                    <img src={button} className="secret-bar-button" />
-                        <h2> 이차버스</h2>
-                </div>
-                <h2>OOO님 환영합니다</h2>
-            </div>
-            <div className="body-container">
-                <div className="main">
-                    <div className="Job-evaluation-dashboard">
-                        <Chart />
-                    </div>
-                    <div className="progress-dashbord">
-                        2
-                    </div>
-                    <div className="feedback">
-                        3
-                    </div>
-                </div>
-                <div className="sidebar">
-                </div>
-            </div>
-        </div>
+        <Container>
+            <BrowserRouter>
+                {/* <div className="background">
+                     mode 상태에 따라 Login, Signin, 또는 FindId 컴포넌트를 렌더링합니다.
+                    {mode === "MAIN" ? <Main setMode={setMode} /> : mode === "EMAIL" ? <Email setMode={setMode} /> : mode === "SIGNIN" ? <Signin setMode={setMode} /> : <FindPw setMode={setMode} />}
+                </div> */}
+                <SideOpenbar>
+                    <Routes>
+                        <Route path="/" element={<Dashbord />} />
+                        <Route path="/" element={<Dashbord />} />
+                        <Route path="/about" element={<Dashbord />} />
+                    </Routes>
+                </SideOpenbar>
+            </BrowserRouter>
+        </Container>
     );
 }
-
-export default Main;

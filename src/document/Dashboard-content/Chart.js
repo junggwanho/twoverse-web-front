@@ -44,7 +44,8 @@ export default function Chart() {
     return (
         <div className="chart">
             <h3 className='chartTitle'>공정 평가 대시보드</h3>
-            <ResponsiveContainer width="100%" aspect={5 / 1}>
+            <hr/>
+            <ResponsiveContainer className="BarChartContainer" width="100%" aspect={5 / 1}>
                 <BarChart
                     width={500}
                     height={100}
