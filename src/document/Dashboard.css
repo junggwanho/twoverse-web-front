@@ -52,7 +52,7 @@ a {
 
 .body-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-top: 30px;
 }
 
@@ -66,7 +66,7 @@ a {
 .Job-evaluation-dashboard {
     grid-column: 1/2fr;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .progress-dashbord {
@@ -84,5 +84,5 @@ a {
     grid-row: span 2;
     max-height: 420px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
