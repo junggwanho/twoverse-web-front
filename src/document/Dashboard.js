@@ -45,7 +45,7 @@ export default function Dashbord() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md="4">
+                    <Col md="3">
                         <ProgressBarList />
                     </Col>
                     <Col className="feedback">
