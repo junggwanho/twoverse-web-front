@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import '../../lib/styles/palette'
 import WriteActionButtons from './WirteActionButtons';
 import palette from '../../lib/styles/palette';
+import Card from 'react-bootstrap/Card';
 
 const EditorBlock = styled.div`
     /* 페이지 위아래 여백 지정 */ 
@@ -50,15 +51,17 @@ export default function InputBox() {
     }, []);
 
     return (
+        <Card style={{ width: '100%' }}>
             <EditorBlock>
-                <h3>피드백 입력창</h3>
-                {/* <hr /> */}
+                <Card.Title>피드백 입력창</Card.Title>
+                <hr />
                 <QuillWrapper>
-                    <div ref={quillElement} />
+                    <div ref={quillElement}/>
                 </QuillWrapper>
                 {/* <hr/> */}
                 <WriteActionButtons />
             </EditorBlock>
+        </Card>
     );
 }
 

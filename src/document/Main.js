@@ -5,6 +5,7 @@ import SideOpenbar from './sideOpenbar/SideOpenbar';
 import ProblemSolvingEvaluation from './ProblemSolvingEvaluation';
 import styled from "styled-components";
 import TextLinkExample from './TextLinkExample';
+
 const Container = styled.div`
     width:100vh;
     height:100vh;
@@ -19,6 +20,7 @@ const TopNavbar = styled.div`
     left: 0;
     z-index: 0;
 `
+
 
 export default function Main() {
     return (
