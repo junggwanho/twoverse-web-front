@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const DashboardContainer = styled.div`
-    width: 80vw;
+    width:90vw;
     height: 100vh;
     display: flex;
     magin: auto;
@@ -38,7 +38,7 @@ export default function Dashbord() {
                     <StudentUser />
                 </div> */}
             {/* </div> */}
-            <Container>
+            <Container className="body-container">
                 <Row>
                     <Col>
                         <Chart />
