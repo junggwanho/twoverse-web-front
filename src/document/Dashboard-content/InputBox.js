@@ -51,19 +51,19 @@ export default function InputBox() {
     }, []);
 
     return (
-        <div className="col-15">
-            <Card style={{ width: '100%' }}>
+            <Card style={{ width: '118.4vh'}}>
                 <EditorBlock>
                     <Card.Title>피드백 입력창</Card.Title>
                     <hr />
-                    <QuillWrapper>
-                        <div ref={quillElement}/>
-                    </QuillWrapper>
-                    {/* <hr/> */}
-                    <WriteActionButtons />
+                    <Card.Text>
+                        <QuillWrapper>
+                            <div ref={quillElement}/>
+                        </QuillWrapper>
+                        {/* <hr/> */}
+                        <WriteActionButtons />
+                    </Card.Text>
                 </EditorBlock>
             </Card>
-        </div>
     );
 }
 

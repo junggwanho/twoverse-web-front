@@ -14,6 +14,7 @@ const DashboardContainer = styled.div`
     height: 100vh;
     display: flex;
     magin: auto;
+    padding-left:25vh;
     justify-content: center;
     align-items: center;
 `
@@ -22,40 +23,42 @@ const DashboardContainer = styled.div`
 export default function Dashbord() {
     return (
         <DashboardContainer>
-            {/* <div className="body-container">
-                <div className="main">
-                    <div className="Job-evaluation-dashboard">
-                        <Chart />
+            <div className="body-container">
+                {/* <div className="body-container">
+                    <div className="main">
+                        <div className="Job-evaluation-dashboard">
+                            <Chart />
+                        </div>
+                        <div className="progress-dashbord">
+                            <ProgressBarList />
+                        </div>
+                        <div className="feedback">
+                            <InputBox />
+                        </div>
                     </div>
-                    <div className="progress-dashbord">
-                        <ProgressBarList />
-                    </div>
-                    <div className="feedback">
-                        <InputBox />
-                    </div>
-                </div>
-                {/* <div className="sidebar">
-                    <StudentUser />
-                </div> */}
-            {/* </div> */}
-            <Container className="body-container">
-                <Row>
-                    <Col>
-                        <Chart />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md="3">
-                        <ProgressBarList />
-                    </Col>
-                    <Col className="feedback">
-                        <InputBox />
-                    </Col>
-                </Row>
-                {/* <div className="sidebar">
-                    <StudentUser />
-                </div> */}
-            </Container>
+                    {/* <div className="sidebar">
+                        <StudentUser />
+                    </div> */}
+                {/* </div> */}
+                <Container>
+                    <Row>
+                        <Col>
+                            <Chart />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md="4">
+                            <ProgressBarList />
+                        </Col>
+                        <Col md="8">
+                            <InputBox />
+                        </Col>
+                    </Row>
+                    {/* <div className="sidebar">
+                        <StudentUser />
+                    </div> */}
+                </Container>
+            </div>
         </DashboardContainer>
     );
 }
