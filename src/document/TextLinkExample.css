@@ -1,10 +1,14 @@
 .bg-body-tertiary{
-    position: relative;
-    bottom: 30px;
     display: flex;
     justify-content: end;
-    height: 28px;
+    height: 40px;
 }
+
+.container{
+    display: inline;
+}
+
+
 
 .justify-content-end{
     display: flex;
