@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const DashboardContainer = styled.div`
-    width:90vw;
+    width:120vh;
     height: 100vh;
     display: flex;
     magin: auto;
