@@ -14,19 +14,19 @@ export default function Main() {
             <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3" bg="dark" data-bs-theme="dark" sticky="top">
                 <Container fluid>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
-                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#">이차버스</Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#"></Navbar.Brand>
+                    <Navbar.Brand href="#">○○○님</Navbar.Brand>
+                    <Navbar.Brand href="#">로그아웃</Navbar.Brand>
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-${expand}`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
