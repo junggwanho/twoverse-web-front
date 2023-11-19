@@ -3,6 +3,11 @@ import styled, { css } from 'styled-components';
 import Button from '../../../common/Button';
 import './StudentUser.css';
 
+const Container = styled.div`
+    display:flex;
+    flex-direction: column;
+`
+
 const StyleButton = styled(Button)`
     font-size: 14px;
     height: 1.5rem;
@@ -30,7 +35,7 @@ export default function StudentUser() {
     };
 
     return (
-        <>
+        <Container>
             <h3>학생정보창</h3>
             <hr />
             <ul className='studentUserList'>
@@ -45,6 +50,6 @@ export default function StudentUser() {
                     </li>
                 ))}
             </ul>
-        </>
+        </Container>
     );
 }

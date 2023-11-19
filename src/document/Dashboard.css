@@ -86,3 +86,9 @@ a {
     width: 100%;
     height: 100vh;
 }
+
+.Student-userlist{
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+}

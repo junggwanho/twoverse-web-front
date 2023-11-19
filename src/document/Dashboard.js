@@ -57,9 +57,10 @@ export default function Dashbord() {
                     </div> */}
                 </Container>
             </div>
-            <div style={{border:"2px solid black", height:"100vh"}}>
+            <div className='Student-userlist'
+            style={{border:"2px solid black", height:"100vh"}}>
                 
-                    추가적인 학생 리스트
+                    <StudentUser/>
                 
             </div>
         </DashboardContainer>
