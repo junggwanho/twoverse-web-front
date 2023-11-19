@@ -87,8 +87,18 @@ a {
     height: 100vh;
 }
 
-.Student-userlist{
+.Student-userlist {
     padding: 20px;
     width: 300px;
+    overflow-y: scroll;
     background-color: white;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: aqua;
+    }
 }

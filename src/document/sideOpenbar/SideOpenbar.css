@@ -26,13 +26,14 @@ img {
 .barContainer {
     /* display: flex; */
     height: 100%;
-    width: 180px;
+    width: 360px;
 
     .sideOpenbar {
         background-color: #313a46;
+        padding: 20px;
         color: #ffffff;
         height: 100vh;
-        width: 240px;
+        width: 360px;
         transition: all 0.5s;
 
         .top_section {

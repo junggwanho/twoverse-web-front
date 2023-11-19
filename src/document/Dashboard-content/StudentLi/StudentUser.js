@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import Button from '../../../common/Button';
 import './StudentUser.css';
+import Form from 'react-bootstrap/Form';
 
 const Container = styled.div`
     display:flex;
@@ -25,6 +26,29 @@ export default function StudentUser() {
         { id: 1, name: '이상욱' },
         { id: 2, name: '최이제' },
         { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' }, { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' }, { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
+        { id: 3, name: '김동건' },
         // 다른 학생들의 정보도 추가
     ];
 
@@ -37,6 +61,15 @@ export default function StudentUser() {
     return (
         <Container>
             <h3>학생정보창</h3>
+            <Form className="d-flex">
+                <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                />
+                <Button variant="outline-success">Search</Button>
+            </Form>
             <hr />
             <ul className='studentUserList'>
                 {studentList.map((student) => (
