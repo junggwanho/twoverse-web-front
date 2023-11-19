@@ -51,7 +51,7 @@ export default function InputBox() {
     }, []);
 
     return (
-            <Card style={{ width: '118.4vh'}}>
+            <Card>
                 <EditorBlock>
                     <Card.Title>피드백 입력창</Card.Title>
                     <hr />

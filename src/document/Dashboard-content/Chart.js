@@ -43,7 +43,7 @@ export default function Chart() {
     ]
 
     return (
-        <Card style={{ width: '150vh', marginBottom: '30px'}}>
+        <Card style={{marginBottom: '30px'}}>
             <div className="chart">
                 {/* <h3 className='chartTitle'>공정 평가 대시보드</h3> */}
                 <Card.Body>

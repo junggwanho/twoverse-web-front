@@ -10,8 +10,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const DashboardContainer = styled.div`
-    width:120vh;
-    height: 100vh;
     display: flex;
     magin: auto;
     padding-left:25vh;
@@ -40,7 +38,7 @@ export default function Dashbord() {
                         <StudentUser />
                     </div> */}
                 {/* </div> */}
-                <Container>
+                <Container style={{width:"100vh"}}>
                     <Row>
                         <Col>
                             <Chart />
@@ -58,6 +56,11 @@ export default function Dashbord() {
                         <StudentUser />
                     </div> */}
                 </Container>
+            </div>
+            <div style={{border:"2px solid black"}}>
+                
+                    추가적인 학생 리스트
+                
             </div>
         </DashboardContainer>
     );

@@ -10,7 +10,7 @@ export default function ProgressBarList() {
     const totalStep = 100;
 
     return (
-        <Card style={{ width: '30vh'}}>
+        <Card>
             <CardBody>
                     <Card.Title>
                         학생 공정별 진행도
