@@ -38,7 +38,7 @@ export default function Dashbord() {
                         <StudentUser />
                     </div> */}
                 {/* </div> */}
-                <Container style={{width:"100vh"}}>
+                <Container style={{width:"100vw", height:"100vh"}}>
                     <Row>
                         <Col>
                             <Chart />
