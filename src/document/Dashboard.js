@@ -38,7 +38,7 @@ export default function Dashbord() {
                         <StudentUser />
                     </div> */}
                 {/* </div> */}
-                <Container style={{width:"100vw", height:"100vh"}}>
+                <Container style={{width:"100vw", height:"80vh"}}>
                     <Row>
                         <Col>
                             <Chart />
@@ -57,7 +57,7 @@ export default function Dashbord() {
                     </div> */}
                 </Container>
             </div>
-            <div style={{border:"2px solid black"}}>
+            <div style={{border:"2px solid black", height:"100vh"}}>
                 
                     추가적인 학생 리스트
                 
