@@ -16,8 +16,8 @@ function App() {
 
 
   const MainBox = styled.div`
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     background: ${palette.cyan[0]};
   `
 

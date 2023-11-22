@@ -6,9 +6,13 @@ import ProblemSolvingEvaluation from './ProblemSolvingEvaluation';
 import styled from "styled-components";
 import { Button, Navbar, Container, Nav, NavDropdown, Carousel, Offcanvas, Form } from 'react-bootstrap';
 
+const MainCotainer = styled.div`
+    max-height: 100vh;
+`
+
 export default function Main() {
     return (
-        <div>
+        <MainCotainer>
             <BrowserRouter>
                 {[false].map((expand) => (
                     <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3" bg="dark" data-bs-theme="dark" sticky="top">
@@ -57,6 +61,6 @@ export default function Main() {
                     <Route path="/Main" element={<ProblemSolvingEvaluation />} />
                 </Routes>
             </BrowserRouter>
-        </div>
+        </MainCotainer>
     );
 }

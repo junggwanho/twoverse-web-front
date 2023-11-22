@@ -11,7 +11,7 @@ import Col from 'react-bootstrap/Col';
 
 const DashboardContainer = styled.div`
     display: flex;
-    magin: auto;
+    magin: 0;
     padding-left:25vh;
     justify-content: center;
     align-items: center;
@@ -22,46 +22,26 @@ export default function Dashbord() {
     return (
         <DashboardContainer>
             <div className="body-container">
-                {/* <div className="body-container">
-                    <div className="main">
-                        <div className="Job-evaluation-dashboard">
-                            <Chart />
-                        </div>
-                        <div className="progress-dashbord">
-                            <ProgressBarList />
-                        </div>
-                        <div className="feedback">
-                            <InputBox />
-                        </div>
-                    </div>
-                    {/* <div className="sidebar">
-                        <StudentUser />
-                    </div> */}
-                {/* </div> */}
-                <Container style={{width:"100vw", height:"80vh"}}>
+                <Container style={{position:"relative", right:"80px" ,width:"90%", height:"70%"}}>
                     <Row>
-                        <Col>
+                        <Col style={{position:"relative", bottom: "30px"}}>
                             <Chart />
                         </Col>
                     </Row>
                     <Row>
-                        <Col md="4">
+                        <Col style={{position:"relative", bottom: "20px"}}
+                        md="4">
                             <ProgressBarList />
                         </Col>
-                        <Col md="8">
+                        <Col style={{position:"relative", bottom: "20px"}}
+                        md="8">
                             <InputBox />
                         </Col>
                     </Row>
-                    {/* <div className="sidebar">
-                        <StudentUser />
-                    </div> */}
                 </Container>
             </div>
-            <div className='Student-userlist'
-            style={{border:"2px solid black", height:"100vh"}}>
-                
+            <div className='Student-userlist'>
                     <StudentUser/>
-                
             </div>
         </DashboardContainer>
     );

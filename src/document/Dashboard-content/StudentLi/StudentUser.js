@@ -22,40 +22,25 @@ const StyleButton = styled(Button)`
 `;
 
 export default function StudentUser() {
-    const studentList = [
+    const initialStudentList = [
         { id: 1, name: '이상욱' },
         { id: 2, name: '최이제' },
         { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' }, { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' }, { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        { id: 3, name: '김동건' },
-        // 다른 학생들의 정보도 추가
     ];
 
+    const [studentList, setStudentList] = useState(initialStudentList);
     const [selectedStudentId, setSelectedStudentId] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
 
     const handleStudentClick = (id) => {
         setSelectedStudentId(id);
+    };
+
+    const handleSearch = () => {
+        const filteredStudents = initialStudentList.filter((student) =>
+            student.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setStudentList(filteredStudents);
     };
 
     return (
@@ -67,8 +52,12 @@ export default function StudentUser() {
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="outline-success" onClick={handleSearch}>
+                    Search
+                </Button>
             </Form>
             <hr />
             <ul className='studentUserList'>
@@ -77,7 +66,11 @@ export default function StudentUser() {
                         <div className={`studentUser ${selectedStudentId === student.id ? 'selected' : ''}`}>
                             <span className='userName'>{student.name}</span>
                         </div>
-                        <StyleButton cyan isSelected={selectedStudentId === student.id} onClick={() => handleStudentClick(student.id)}>
+                        <StyleButton
+                            cyan
+                            isSelected={selectedStudentId === student.id}
+                            onClick={() => handleStudentClick(student.id)}
+                        >
                             change
                         </StyleButton>
                     </li>

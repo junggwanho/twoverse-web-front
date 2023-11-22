@@ -44,7 +44,7 @@ function ProgressBar({ totalStep, nowStep }) {
 
 const styles = StyleSheet.create({
   bar: {
-    marginTop: '12px',
+    marginTop: '6px',
     width: '100%',
     height: 6,
     backgroundColor: palette.gray[3]
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     color: '#AAC9CE',
     fontWeight: '400',
     fontSize: 16,
-    padding: 20,
+    padding: 16,
     lineHeight: 10,
     textAlign: 'center'
   }

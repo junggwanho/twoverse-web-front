@@ -15,21 +15,23 @@ const EditorBlock = styled.div`
     padding: 10px;
     -webkit-box-shadow: 0px 0px 12px -1px #000000;
     box-shadow: 0px 0px 2px -1px #000000;
+    border-radius: 1px;
 `;
 
 const QuillWrapper = styled.div`
     border: 1px solid ${palette.gray[5]};
     border-radius: 3%;
     .ql-editor{
-        min-height: 200px;
-        padding: 0;
+        height: 130px;
+        padding: 5px;
         max-height: 220px;
         font-size: 1.125rem
         line-height: 1.5;
     }
     .ql-editor.ql-blank::before{
         left: 0px;
-    }z
+    }
+    
 `;
 
 export default function InputBox() {
@@ -51,19 +53,21 @@ export default function InputBox() {
     }, []);
 
     return (
-            <Card>
-                <EditorBlock>
-                    <Card.Title>피드백 입력창</Card.Title>
-                    <hr />
-                    <Card.Text>
-                        <QuillWrapper>
-                            <div ref={quillElement}/>
-                        </QuillWrapper>
-                        {/* <hr/> */}
-                        <WriteActionButtons />
-                    </Card.Text>
-                </EditorBlock>
-            </Card>
+        <Card>
+            <EditorBlock>
+                <Card.Title>
+                    <h6>피드백 입력창</h6>
+                </Card.Title>
+                <hr />
+                <Card.Text>
+                    <QuillWrapper>
+                        <div ref={quillElement} />
+                    </QuillWrapper>
+                    {/* <hr/> */}
+                    <WriteActionButtons />
+                </Card.Text>
+            </EditorBlock>
+        </Card>
     );
 }
 

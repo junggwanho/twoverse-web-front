@@ -13,7 +13,7 @@ export default function ProgressBarList() {
         <Card>
             <CardBody>
                     <Card.Title>
-                        학생 공정별 진행도
+                        <h6>학생 공정별 진행도</h6>
                     </Card.Title>
                     <hr />
                     <ProgressBar totalStep={totalStep} nowStep={nowStep} />

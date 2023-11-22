@@ -43,11 +43,13 @@ export default function Chart() {
     ]
 
     return (
-        <Card style={{marginBottom: '30px'}}>
+        <Card style={{marginBottom: '0px', width: '100%', height: "100%"}}>
             <div className="chart">
                 {/* <h3 className='chartTitle'>공정 평가 대시보드</h3> */}
                 <Card.Body>
-                    <Card.Title>공정 평가 대시보드</Card.Title>
+                    <Card.Title>
+                        <h6>공정 평가 대시보드</h6>
+                    </Card.Title>
                     <hr/>
                     <ResponsiveContainer className="BarChartContainer" width="100%" aspect={5 / 1}>
                         <BarChart
@@ -55,7 +57,6 @@ export default function Chart() {
                             height={100}
                             data={data}
                             margin={{
-                                top: 5,
                                 right: 30,
                                 left: 20,
                                 bottom: 5,
